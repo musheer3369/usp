@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_theme">
+    <sp_theme action="INSERT_OR_UPDATE">
+        <css_variables/>
+        <footer display_value="USP Footer">78065768dbb8a7006d7070e21f961994</footer>
+        <footer_fixed>true</footer_fixed>
+        <header display_value="USP Header">c9e557e4db78a7006d7070e21f96196f</header>
+        <name>USP Theme</name>
+        <navbar_fixed>true</navbar_fixed>
+        <sys_class_name>sp_theme</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2018-09-24 06:16:39</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7c469f2cdbb8a7006d7070e21f9619c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>USP Theme</sys_name>
+        <sys_package display_value="Unified Service Portal" source="x_mst_usp">3c7943a8db38a7006d7070e21f9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Unified Service Portal">3c7943a8db38a7006d7070e21f9619d0</sys_scope>
+        <sys_update_name>sp_theme_7c469f2cdbb8a7006d7070e21f9619c5</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2018-09-24 06:16:39</sys_updated_on>
+    </sp_theme>
+</record_update>

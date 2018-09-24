@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_header_footer">
+    <sp_header_footer action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>usp-portal-footer</id>
+        <internal>false</internal>
+        <link/>
+        <name>USP Footer</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2018-09-24 06:15:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>78065768dbb8a7006d7070e21f961994</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>USP Footer</sys_name>
+        <sys_package display_value="Unified Service Portal" source="x_mst_usp">3c7943a8db38a7006d7070e21f9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Unified Service Portal">3c7943a8db38a7006d7070e21f9619d0</sys_scope>
+        <sys_update_name>sp_header_footer_78065768dbb8a7006d7070e21f961994</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2018-09-24 06:15:49</sys_updated_on>
+        <template><![CDATA[<div class="container-fluid border">
+  <div class="row footer-area">
+
+    <div class="col-md-12">
+      <div class="footer-left">      
+        <a href="rsp?id=rsp_tc">Terms of Use</a>
+      </div>
+
+      <div class="footer-right">
+
+      </div>
+    </div>
+
+  </div>
+</div>]]></template>
+    </sp_header_footer>
+</record_update>
