@@ -14,6 +14,9 @@
         <css>.navbar-toggle.pull-left {&#13;
   margin-left: 15px;&#13;
 }&#13;
+.white-backdrop{&#13;
+background-color:white ;&#13;
+}&#13;
 @media (min-width: 768px) {&#13;
   .pull-sm-left {&#13;
     float: left !important;&#13;
@@ -62,7 +65,7 @@
         <sys_created_on>2018-09-24 06:14:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c9e557e4db78a7006d7070e21f96196f</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>USP Header</sys_name>
         <sys_package display_value="Unified Service Portal" source="x_mst_usp">3c7943a8db38a7006d7070e21f9619d0</sys_package>
         <sys_policy/>
@@ -70,7 +73,7 @@
         <sys_scope display_value="Unified Service Portal">3c7943a8db38a7006d7070e21f9619d0</sys_scope>
         <sys_update_name>sp_header_footer_c9e557e4db78a7006d7070e21f96196f</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2018-09-24 06:15:04</sys_updated_on>
+        <sys_updated_on>2018-10-15 12:10:57</sys_updated_on>
         <template><![CDATA[<div class="white-backdrop">
   <div class="container-fluid">
     <div class="row">
@@ -86,52 +89,62 @@
   </div>
   
 </div>
-<div class="navbar navbar-default" role="navigation">  
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <!--Left Hamburger--> 
-      <button type="button" class="navbar-toggle collapsed pull-left"
-              data-toggle="collapse" data-target="#collapseLeft" aria-expanded="false">
-      		<span class="sr-only">Toggle navigation</span>
-        	<span class="icon-bar"></span>
-        	<span class="icon-bar"></span>
-        	<span class="icon-bar"></span>
-      </button>
-      
-      <!--Right Hamburger-->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseRight">
-            <span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-    
-    </div>
-    <div class="collapse navbar-collapse" id="collapseRight">
-      <ul class="nav navbar-nav">
-    		  <li ng-repeat="item in data.menu.items" ng-class="{dropdown:item.items.length >0}" 
-                  ng-include="'ricoh-nav-template'" class="menu-link">      
-     		 </li>	
-  		</ul>
-      <ul class="nav navbar-nav navbar-right">
-         <li class="dropdown">
-           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-             <span class="glyphicon glyphicon-user"></span>
-             <small>Logged in as</small> <strong>{{::user.name}}</strong>
-             <span class="glyphicon glyphicon-chevron-down"></span>
-           </a>
-           <ul class="dropdown-menu">             	
-            <li><a href="{{::url_suffix}}?id=pr_changepassword">${Change Password}</a>
-            <li><a href="{{::url_suffix}}?id=sc_cat_item&sys_id=bf029e69dbea62806d7070e21f9619be&targetuser={{::user.sys_id}}">${Edit Contact Info}</a></li>         
-            <li><a href="{{::portal.logoutUrl}}">${Logout}</a></li>
-           </ul>
-        </li>
-      </ul>
-    </div>  
-  </div>
-    
-</div>
 
-]]></template>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-offset-2">
+    
+               
+            <div class="navbar navbar-default" role="navigation" >  
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <!--Left Hamburger--> 
+                  <button type="button" class="navbar-toggle collapsed pull-left"
+                          data-toggle="collapse" data-target="#collapseLeft" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                  </button>
+
+                  <!--Right Hamburger-->
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseRight">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+
+                </div>
+                <div class="collapse navbar-collapse" id="collapseRight">   
+                   <ul class="nav navbar-nav">
+                          <li ng-repeat="item in data.menu.items" ng-class="{dropdown:item.items.length >0}" 
+                              ng-include="'usp-nav-template'" class="menu-link">      
+                         </li>	
+                    </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                     <li class="dropdown">
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                         <span class="glyphicon glyphicon-user"></span>
+                         <small>Logged in as</small> <strong>{{::user.name}}</strong>
+                         <span class="glyphicon glyphicon-chevron-down"></span>
+                       </a>
+                       <ul class="dropdown-menu">             	
+                        <li><a href="{{::url_suffix}}?id=pr_changepassword">${Change Password}</a>
+                        <li><a href="{{::url_suffix}}?id=sc_cat_item&sys_id=bf029e69dbea62806d7070e21f9619be&targetuser={{::user.sys_id}}">${Edit Contact Info}</a></li>         
+                        <li><a href="{{::portal.logoutUrl}}">${Logout}</a></li>
+                       </ul>
+                    </li>
+                  </ul>
+                </div> 
+                    
+                </div>
+                </div>
+                
+       </div>
+  </div>
+</div>
+            
+    ]]></template>
     </sp_header_footer>
 </record_update>

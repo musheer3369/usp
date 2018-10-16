@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sp_row">
-    <sp_row action="INSERT_OR_UPDATE">
-        <class_name/>
-        <order>1</order>
-        <sp_column/>
-        <sp_container display_value="Home - Container 1">b4a2df64db78a7006d7070e21f9619ea</sp_container>
-        <sys_class_name>sp_row</sys_class_name>
+<record_update table="content_css">
+    <content_css action="INSERT_OR_UPDATE">
+        <name>usp.base.css</name>
+        <style>body{&#13;
+background-color:#4A4A4A;&#13;
+}</style>
+        <sys_class_name>content_css</sys_class_name>
         <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
-        <sys_created_on>2018-09-24 06:00:29</sys_created_on>
+        <sys_created_on>2018-10-15 07:51:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>b8a21fa4db78a7006d7070e21f961905</sys_id>
+        <sys_id>a7557f5bdb05a7806d7070e21f961942</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>1</sys_name>
+        <sys_name>usp.base.css</sys_name>
         <sys_package display_value="Unified Service Portal" source="x_mst_usp">3c7943a8db38a7006d7070e21f9619d0</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Unified Service Portal">3c7943a8db38a7006d7070e21f9619d0</sys_scope>
-        <sys_update_name>sp_row_b8a21fa4db78a7006d7070e21f961905</sys_update_name>
+        <sys_update_name>content_css_a7557f5bdb05a7806d7070e21f961942</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2018-09-24 06:00:29</sys_updated_on>
-    </sp_row>
+        <sys_updated_on>2018-10-15 07:51:43</sys_updated_on>
+        <type>local</type>
+        <url/>
+    </content_css>
 </record_update>

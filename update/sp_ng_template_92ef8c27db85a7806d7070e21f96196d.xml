@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_ng_template">
+    <sp_ng_template action="INSERT_OR_UPDATE">
+        <id>usp-nav-template</id>
+        <sp_widget display_value="USP Header">c9e557e4db78a7006d7070e21f96196f</sp_widget>
+        <sys_class_name>sp_ng_template</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2018-10-15 09:47:22</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>92ef8c27db85a7806d7070e21f96196d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>usp-nav-template</sys_name>
+        <sys_package display_value="Unified Service Portal" source="x_mst_usp">3c7943a8db38a7006d7070e21f9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Unified Service Portal">3c7943a8db38a7006d7070e21f9619d0</sys_scope>
+        <sys_update_name>sp_ng_template_92ef8c27db85a7806d7070e21f96196d</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2018-10-15 09:47:22</sys_updated_on>
+        <template><![CDATA[<a ng-if="item.items.length == 0" ng-href="{{item.href}}">{{ item.label }}</a>
+<a ng-if="item.items.length > 0" href="javascript:void(0)" class="dropdown-toggle" 
+   data-toggle="dropdown" role="button" aria-expanded="false">{{ item.label }} <span class="caret"></span></a>
+
+   
+
+    <ul ng-if="item.items.length > 0" class="dropdown-menu" role="menu">
+      <li ng-repeat="item in item.items">  
+        <a ng-href="{{item.href}}">{{ item.label }}</a>
+      </li>
+	</ul>]]></template>
+    </sp_ng_template>
+</record_update>
