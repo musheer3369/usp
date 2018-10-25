@@ -7,8 +7,9 @@
   var c = this;
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>.row-buffer{&#13;
-margin:30px;&#13;
+        <css>.row-buffer{
+margin:0px;
+ 
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -23,9 +24,84 @@ margin:30px;&#13;
         <option_schema/>
         <public>false</public>
         <roles/>
-        <script><![CDATA[(function() {
+        <script><![CDATA[(function($location) {
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
+	
+	data.isReturnMail = isReturnMailVisible();
+	data.isIntelligentDelivery = isIntelligentDeliveryVisible();
+	data.isPrintPlatformVisible = isPrintPlatformVisible();
+	data.isBusinessAnalyticsVisible = isBusinessAnalyticsVisible();
+	
+	console.log("1:" + data.isReturnMail);
+	console.log("2:" + data.isIntelligentDelivery);
+	console.log("3:" + data.isPrintPlatformVisible);
+	console.log("4:" + data.isBusinessAnalyticsVisible);
+	
+	function returnMailRedirect()
+	{
+		alert("hello world");
+		
+		$location.url("www.google.com");
+	}
+	
+	
+	function isReturnMailVisible ()
+	{ 
+		if(gs.getUser().hasRole("itil")){
+			return true;
+		}
+		
+		var gr = new GlideRecord("u_usp_urls");
+		gr.addActiveQuery();
+		gr.addEncodedQuery("u_customer=" + gs.getUser().getCompanyID() );
+    gr.query();
+		while(gr.next())
+			{
+				if(gr.u_product.category.sys_name == "RMAAS")
+					{
+					  return true;
+					}
+			}
+	
+		return false;
+	}
+	
+	function isIntelligentDeliveryVisible(){
+		if(gs.getUser().hasRole("itil")){
+			return true;
+		}
+		
+		var gr = new GlideRecord("u_usp_urls");
+		gr.addActiveQuery();
+		gr.addEncodedQuery("u_customer=" + gs.getUser().getCompanyID() );
+    gr.query();
+		while(gr.next())
+			{
+				if(gr.u_product.category.sys_name == "PPCS")
+					{
+					  return true;
+					}
+			}
+	
+		return false;
+	}
+	
+	function isPrintPlatformVisible(){
+		if(gs.getUser().hasRole("itil")){
+			return true;
+		}
+		return false;
+	}
+	
+	function isBusinessAnalyticsVisible(){
+		if(gs.getUser().hasRole("itil")){
+			return true;
+		}
+		return false;
+		
+	}
+	
 
 })();]]></script>
         <servicenow>false</servicenow>
@@ -34,7 +110,7 @@ margin:30px;&#13;
         <sys_created_on>2018-10-08 06:38:40</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3c306b49db012f406d7070e21f961910</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_name>USP Landing Widget</sys_name>
         <sys_package display_value="Unified Service Portal" source="x_mst_usp">3c7943a8db38a7006d7070e21f9619d0</sys_package>
         <sys_policy/>
@@ -42,24 +118,26 @@ margin:30px;&#13;
         <sys_scope display_value="Unified Service Portal">3c7943a8db38a7006d7070e21f9619d0</sys_scope>
         <sys_update_name>sp_widget_3c306b49db012f406d7070e21f961910</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2018-10-15 09:28:36</sys_updated_on>
+        <sys_updated_on>2018-10-25 08:59:21</sys_updated_on>
         <template><![CDATA[<div >
   <h3> Welcome to the Ricoh Services Portal</h3>
   <h4> This portal is a generic copy that will need to be written or discarded</h4>
 </div>
 
-<div class="row row-buffer">
-  <div class="col-xs-12 col-md-6 col-lg-6" ng-include="'tmpReturnMail'">
+<div class="row">
+  <a href="www.abcxyz.com">
+  <div  ng-if="c.data.isReturnMail" class="col-xs-12 col-md-5  col-lg-6" ng-include="'tmpReturnMail'">
   
   </div>
-  <div class="col-xs-12 col-md-6 col-lg-6" ng-include="'tmpIntelligentDelivery'">  
+    </a>
+  <div ng-if="c.data.isIntelligentDelivery" class="col-xs-12 col-md-5 col-lg-6" ng-include="'tmpIntelligentDelivery'">  
   </div>  
-</div>  
-<div class="row row-buffer">
-  <div class="col-xs-12 col-md-6 col-lg-6" ng-include="'tmpPrintPlatform'">
+<a href="www.helloworld.com">
+  <div ng-if="c.data.isPrintPlatformVisible" class="col-xs-12 col-md-5 col-lg-6" ng-include="'tmpPrintPlatform'">
   
   </div>
-  <div class="col-xs-12 col-md-6 col-lg-6" ng-include="'tmpBusinessAnalytics'">  
+  </a>
+  <div ng-if="c.data.isBusinessAnalyticsVisible" class="col-xs-12 col-md-5 col-lg-6" ng-include="'tmpBusinessAnalytics'">  
   </div>  
 </div>  
 ]]></template>
