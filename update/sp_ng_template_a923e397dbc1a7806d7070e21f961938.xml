@@ -8,7 +8,7 @@
         <sys_created_on>2018-10-15 06:31:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>a923e397dbc1a7806d7070e21f961938</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>tmpPrintPlatform</sys_name>
         <sys_package display_value="Unified Service Portal" source="x_mst_usp">3c7943a8db38a7006d7070e21f9619d0</sys_package>
         <sys_policy/>
@@ -16,16 +16,16 @@
         <sys_scope display_value="Unified Service Portal">3c7943a8db38a7006d7070e21f9619d0</sys_scope>
         <sys_update_name>sp_ng_template_a923e397dbc1a7806d7070e21f961938</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2018-10-25 07:54:36</sys_updated_on>
-        <template><![CDATA[<div class="media" style="padding:10px;">
-  	<div class="media-body" style="background-color:#38958e;padding:15px">
+        <sys_updated_on>2018-10-30 06:57:44</sys_updated_on>
+        <template><![CDATA[<div class="media" style="padding:10px" >
+  	<div class="media-body" style="background-color:#38958e; padding:10px">
       <h4 class="media-heading">Ricoh Print Platform Cloud Services </h4>
      
-      <h4> RPPCS</h4>
+      <h4> Rppcs</h4>
       
     </div>
     <div class="media-right media-middle" style="background-color:#38958e;padding:20px">
-      <img src="cloud-icon.png"  class="media-object"    />
+      <img src="cloud-icon.png"  class="media-object"  style="width:65px;height:65px"    />
       
    </div> 
   

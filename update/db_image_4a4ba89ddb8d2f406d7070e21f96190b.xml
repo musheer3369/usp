@@ -4,16 +4,16 @@
         <active>true</active>
         <category>Service Portal</category>
         <format>png</format>
-        <height>50</height>
+        <height>65</height>
         <image/>
         <name>check-icon.png</name>
-        <size_bytes>1305</size_bytes>
+        <size_bytes>1799</size_bytes>
         <sys_class_name>db_image</sys_class_name>
         <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
         <sys_created_on>2018-10-08 12:00:38</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4a4ba89ddb8d2f406d7070e21f96190b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>check-icon.png</sys_name>
         <sys_package display_value="Unified Service Portal" source="x_mst_usp">3c7943a8db38a7006d7070e21f9619d0</sys_package>
         <sys_policy/>
@@ -21,9 +21,9 @@
         <sys_scope display_value="Unified Service Portal">3c7943a8db38a7006d7070e21f9619d0</sys_scope>
         <sys_update_name>db_image_4a4ba89ddb8d2f406d7070e21f96190b</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2018-10-08 12:00:45</sys_updated_on>
+        <sys_updated_on>2018-11-01 12:06:58</sys_updated_on>
         <thumbnail/>
-        <width>50</width>
+        <width>65</width>
     </db_image>
     <sys_attachment action="INSERT_OR_UPDATE">
         <average_image_color>#0</average_image_color>
@@ -31,51 +31,37 @@
         <compressed>true</compressed>
         <content_type>image/png</content_type>
         <file_name>image</file_name>
-        <image_height>50</image_height>
-        <image_width>50</image_width>
-        <size_bytes>1305</size_bytes>
-        <size_compressed>1328</size_compressed>
+        <image_height>65</image_height>
+        <image_width>65</image_width>
+        <size_bytes>1799</size_bytes>
+        <size_compressed>1822</size_compressed>
         <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
-        <sys_created_on>2018-10-08 12:00:45</sys_created_on>
+        <sys_created_on>2018-11-01 12:06:58</sys_created_on>
         <sys_domain>8eba0beedb423200ddad70e21f9619df</sys_domain>
         <sys_domain_path>!!!/!!!/!!!/!!!/!!!/</sys_domain_path>
-        <sys_id>665ba4dddb8d2f406d7070e21f961914</sys_id>
+        <sys_id>afe2d009dbadab406d7070e21f9619d2</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2018-10-08 12:00:46</sys_updated_on>
+        <sys_updated_on>2018-11-01 12:06:58</sys_updated_on>
         <table_name>ZZ_YYdb_image</table_name>
         <table_sys_id>4a4ba89ddb8d2f406d7070e21f96190b</table_sys_id>
     </sys_attachment>
     <sys_attachment_doc action="INSERT_OR_UPDATE">
-        <data>H4sIAAAAAAAAAAEZBeb6iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEA
-ALGPC/xhBQAABNBJREFUaAXdmk2MFEUUxx1wBdENBCJmPZjgauSAB3YTIiToxRDxwMaQEPDmyejB
-eIEDiQfPJgvq3Y0fwG1FjB+cNyZ+HEUNET0YT2BWDJEEUZffb1ID89XTVd21vVkr+WWmu17933vT
-3dXVr6d1V8a2tLQ0htwOeBwehU0wDrZrcBUuwUW40Gq1bvKZpbXqqhC8ge6HGXgODP4K/ASLYAI2
-7TbDY/AAmNRn8DF8TlIdOzYbbCQwBefgBvwJZ+AwbCkLQ5tg6xjHqqHWVNnYbP042wan4T+Yh31w
-T1UHjg0aaqmp9raqeqXjEF8Ps+CvtwC7SwclGqgZtPWhr/WJEqPNEZyAr+BXODDaun6vPoIvfU7U
-V0QBoWn4Db6EB7OIRojoK/jU93TEkGITBGbgOsxB5eug2MPoHn0G38bgrJjeGOiRUOD19NF5RxhD
-iCXtyDDIa8JDOpc3pOpqxhJiirtmMHZ28iLzmmj8dCpK1VhCTMZWPpth5LTn7NTYhV0UfP9+Ywqx
-zfb39Wxj5M3OOXzZp9gexwkbxhZiLL5pYuBddSFBd0VMjdFYhzqnw7WTS4Tsd+yhDgt24v8+eKig
-u73bGOFfGFybsdNF2/wogeXuw/86cJL5oMyXscK5Hjt2jIPXxr6ejoY38P8+OO2PPCKGZaxgzJ3n
-nfbOQ+xwOb1i0y2+j8NfMHi6DPlBjRWM+dDtbjZOwZnbOxr+gu/n4R84mOLamOFUewxfxuAPOJwi
-kssWvzvBI3E8VdOYwdjHPNecrWylT3apjsrs8TkBXhOlF/cwLWMG25SJHIHLwwyXcx8+74VvwVlq
-XVVfjL0MR+5GYBIsFDTWcGzR4z2wCLGLwsONGs6NfdJErHos1hCqMvQNBj0Le0ii7tlg7JtMxHn4
-GjTSPA1w5IU9QxIXMjg19vE1GYSiJUjiSYzfhaMk8Wn0wAhDE2lnFGFby4QkHkbgLHxIEidqifUO
-bp9RJmLFb3NvX94tkrgfxU/gR3glr3o79qsm8jNYxlyWRhL68O67AQ5yNLLVe0PAxn4p+oZIQMcg
-+YGLMW+Cd18L21kbmp0b4k4TiVqiYPcquB56LTYabF+Em/BM7JgUO3TvLFEcyI6oRSN2L4BL57fA
-U6aw0f9UsH250KhmB/p3Fo1qsSN6GR8CXOTzLHjeDzT2T8Lv8PZAZ6YdaA9dxic9WCGyHX6Bb2Br
-d2xsb4Qf4AtY292X8zvagw9WOqAj6VEX+63wNZjQ9qCxlu/n4XvYmDPwfi30Bx91QxDJxQfENsBH
-4Kn2NLwDV+CRfsc5t9HfDRZKhj9N0nEaFlKcYr8GToKz09+wN2V8FVt8FJeDFMSgcoGOsUfhpSqB
-pYzBxwFw5iwu0IVkZjFa3SXTkMj/o4gdkpngqKzu1wqd85VEVv+Lnq5kZkjoOsxB48U7fQbfxlDt
-1VtXMh4ZTzOrHY29M9FX8Knv6U48tT4R8prxTZGzWfJSPtW5PoIvfca9aot1gqCzmVOzc7g3pOyv
-H9QM2vrQV/krttgE+u0QH/YXjrF+u9ht9LwOXADOg8sOVxejb3ax4jF2OHNt5kLTX8+quM8GK/an
-mlZM0KNsCN4qxor/zal2It1JkpSn2BPg87mlWKuYJmqz7GTFxmLHRfguZyHiFiDIHjBeNtuMAAAA
-AElFTkSuQmCCbq0wphkFAAA=</data>
-        <length>1776</length>
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
         <position>0</position>
-        <sys_attachment display_value="image" sys_id="665ba4dddb8d2f406d7070e21f961914">665ba4dddb8d2f406d7070e21f961914</sys_attachment>
+        <sys_attachment display_value="image" sys_id="afe2d009dbadab406d7070e21f9619d2">afe2d009dbadab406d7070e21f9619d2</sys_attachment>
         <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
-        <sys_created_on>2018-10-08 12:00:45</sys_created_on>
-        <sys_id>2a5ba4dddb8d2f406d7070e21f961914</sys_id>
+        <sys_created_on>2018-11-01 12:06:58</sys_created_on>
+        <sys_id>efe2d009dbadab406d7070e21f9619d2</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>2416</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="afe2d009dbadab406d7070e21f9619d2">afe2d009dbadab406d7070e21f9619d2</sys_attachment>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2018-11-01 12:06:58</sys_created_on>
+        <sys_id>63e2d009dbadab406d7070e21f9619d3</sys_id>
     </sys_attachment_doc>
 </record_update>

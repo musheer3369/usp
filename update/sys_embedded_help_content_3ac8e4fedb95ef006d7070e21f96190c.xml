@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_embedded_help_content">
+    <sys_embedded_help_content action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>assessment</category>
+        <content><![CDATA[ <h1 class="title topictitle1">Assessment stakeholders</h1>  <div class="body conbody">  <div class="p"><span class="ph">A stakeholder is a        category user with specific product or service knowledge, who is associated to an assessable        record. A stakeholder is familiar with the assessable record and all the metrics within a        specific category. The same category user can be associated to multiple assessable records,        in which case the system creates a stakeholder record for each association.</span>   <span class="ph">The system determines which assessable records and          questions a user receives by looking at the metric categories and assessable records for          which those users are stakeholders. Assessment administrators can create and manage          category users and stakeholders.</span><div class="note note"><span class="notetitle">Note:</span> Category          users and stakeholders are used only for scheduled assessments.</div></div> </div> <div class="related-links"><div class="relinfo"><div class="reltitle">Related information<br /><div><a class="link" href="https://docs.servicenow.com/?context&#61;CSHelp:CategoryUsersStakeholders&amp;version&#61;kingston" target="_blank">Category users and stakeholders</a></div></div></div></div>]]></content>
+        <last_sync>2018-10-25 13:56:10</last_sync>
+        <modifier>normal</modifier>
+        <name>asmt_m2m_stakeholder_list-normal</name>
+        <page>asmt_m2m_stakeholder_list</page>
+        <product>1</product>
+        <qualifier/>
+        <role/>
+        <role_order>1000</role_order>
+        <snc_created>true</snc_created>
+        <sys_class_name>sys_embedded_help_content</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2018-10-25 13:56:10</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3ac8e4fedb95ef006d7070e21f96190c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>asmt_m2m_stakeholder_list-normal</sys_name>
+        <sys_package display_value="Unified Service Portal" source="x_mst_usp">3c7943a8db38a7006d7070e21f9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Unified Service Portal">3c7943a8db38a7006d7070e21f9619d0</sys_scope>
+        <sys_update_name>sys_embedded_help_content_3ac8e4fedb95ef006d7070e21f96190c</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-10-25 13:56:10</sys_updated_on>
+        <version>k</version>
+    </sys_embedded_help_content>
+    <sys_translated_text action="delete_multiple" query="documentkey=3ac8e4fedb95ef006d7070e21f96190c"/>
+</record_update>

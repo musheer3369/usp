@@ -8,7 +8,7 @@
         <sys_created_on>2018-10-15 06:29:22</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>90522b57dbc1a7806d7070e21f9619f4</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_name>tmpReturnMail</sys_name>
         <sys_package display_value="Unified Service Portal" source="x_mst_usp">3c7943a8db38a7006d7070e21f9619d0</sys_package>
         <sys_policy/>
@@ -16,10 +16,10 @@
         <sys_scope display_value="Unified Service Portal">3c7943a8db38a7006d7070e21f9619d0</sys_scope>
         <sys_update_name>sp_ng_template_90522b57dbc1a7806d7070e21f9619f4</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2018-10-25 08:54:59</sys_updated_on>
-        <template><![CDATA[<div class="media" style="padding:10px;" 
-     >
-  	<div class="media-body" style="background-color:#4E92AB;padding:15px">
+        <sys_updated_on>2018-10-30 07:02:01</sys_updated_on>
+        <template><![CDATA[<div class="media" style="padding:10px" > 
+     
+  	<div class="media-body" style="background-color:#4E92AB;padding:10px">
       <h4 class="media-heading">Return mail as a Service</h4>
      
      
@@ -27,7 +27,7 @@
       
     </div>
     <div class="media-right media-middle" style="background-color:#4E92AB;padding:20px">
-      <img src="mail-icon.png"  class="media-object"    />
+      <img src="mail-icon.png"  class="media-object" style="width:65px;height:65px"   />
       
    </div> 
   

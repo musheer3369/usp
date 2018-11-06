@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>execute</operation>
+        <source_scope display_value="Unified Service Portal">3c7943a8db38a7006d7070e21f9619d0</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>guest</sys_created_by>
+        <sys_created_on>2018-10-26 12:27:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b72e958fdb55270063599017db961991</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Glide API: string utilities</sys_name>
+        <sys_package display_value="Unified Service Portal" source="x_mst_usp">3c7943a8db38a7006d7070e21f9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Unified Service Portal">3c7943a8db38a7006d7070e21f9619d0</sys_scope>
+        <sys_update_name>sys_scope_privilege_b72e958fdb55270063599017db961991</sys_update_name>
+        <sys_updated_by>guest</sys_updated_by>
+        <sys_updated_on>2018-10-26 12:27:54</sys_updated_on>
+        <target_name>Glide API: string utilities</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>scriptable</target_type>
+    </sys_scope_privilege>
+</record_update>

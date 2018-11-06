@@ -2,15 +2,23 @@
 <record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function() {
+        <client_script><![CDATA[function($scope,$window) {
   /* widget controller */
-  var c = this;
+  var c = this;			
+	$scope.func = function(x){	
+		console.log(x);
+		alert(x);
+		$window.open(x, '_blank');
+	}
+	
+	
+	
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>.row-buffer{
-margin:0px;
- 
-}</css>
+        <css>.media-body h4{&#13;
+color:white !important;&#13;
+}&#13;
+</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -24,50 +32,59 @@ margin:0px;
         <option_schema/>
         <public>false</public>
         <roles/>
-        <script><![CDATA[(function($location) {
+        <script><![CDATA[(function() {
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
 	
-	data.isReturnMail = isReturnMailVisible();
-	data.isIntelligentDelivery = isIntelligentDeliveryVisible();
-	data.isPrintPlatformVisible = isPrintPlatformVisible();
-	data.isBusinessAnalyticsVisible = isBusinessAnalyticsVisible();
+	data.isReturnMail = isReturnMailVisible() + '';
+	//data.isReturnMailUrl= isReturnMailVisible();
+	
+	data.isIntelligentDelivery = isIntelligentDeliveryVisible() ;
+	//data.isIntelligentDeliveryUrl=isIntelligentDeliveryVisible();
+	
+	data.isPrintPlatform = isPrintPlatformVisible() + '';
+	//data.isPrintPlatformVisibleUrl=isPrintPlatformVisible();
+	
+	
+	data.isBusinessAnalytics = isBusinessAnalyticsVisible() ;
+	//data.isBusinessAnalyticsVisibleUrl=isBusinessAnalyticsVisible();
+	
 	
 	console.log("1:" + data.isReturnMail);
-	console.log("2:" + data.isIntelligentDelivery);
-	console.log("3:" + data.isPrintPlatformVisible);
-	console.log("4:" + data.isBusinessAnalyticsVisible);
+	//console.log("2:" + data.isIntelligentDelivery);
+	//console.log("3:" + data.isPrintPlatform);
+	//console.log("4:" + data.isBusinessAnalytics);
 	
-	function returnMailRedirect()
-	{
-		alert("hello world");
 		
-		$location.url("www.google.com");
-	}
-	
 	
 	function isReturnMailVisible ()
 	{ 
+		
 		if(gs.getUser().hasRole("itil")){
-			return true;
+						
+			return 'www.ricoh.com';
 		}
 		
-		var gr = new GlideRecord("u_usp_urls");
-		gr.addActiveQuery();
+		var gr = new GlideRecord("u_usp_urls");		
 		gr.addEncodedQuery("u_customer=" + gs.getUser().getCompanyID() );
     gr.query();
+		console.log("Total Rows:" + gr.getRowCount());
+		
 		while(gr.next())
 			{
-				if(gr.u_product.category.sys_name == "RMAAS")
+			//	console.log("URL:" + gr.u_redirect_url);
+				
+				if(gr.u_product.category.sys_name == "RMAAS"  )
 					{
-					  return true;
+						//console.log("url:" + gr.u_redirect_url);
+						return gr.u_redirect_url;
 					}
 			}
 	
-		return false;
+		return '';
 	}
 	
-	function isIntelligentDeliveryVisible(){
+	function isPrintPlatformVisible (){
 		if(gs.getUser().hasRole("itil")){
 			return true;
 		}
@@ -80,25 +97,26 @@ margin:0px;
 			{
 				if(gr.u_product.category.sys_name == "PPCS")
 					{
-					  return true;
+						
+					  return gr.u_redirect_url;
 					}
 			}
 	
-		return false;
+		return ;
 	}
 	
-	function isPrintPlatformVisible(){
+	function isIntelligentDeliveryVisible(){
 		if(gs.getUser().hasRole("itil")){
 			return true;
 		}
-		return false;
+		return ;
 	}
 	
 	function isBusinessAnalyticsVisible(){
 		if(gs.getUser().hasRole("itil")){
 			return true;
 		}
-		return false;
+		return ;
 		
 	}
 	
@@ -110,7 +128,7 @@ margin:0px;
         <sys_created_on>2018-10-08 06:38:40</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3c306b49db012f406d7070e21f961910</sys_id>
-        <sys_mod_count>44</sys_mod_count>
+        <sys_mod_count>162</sys_mod_count>
         <sys_name>USP Landing Widget</sys_name>
         <sys_package display_value="Unified Service Portal" source="x_mst_usp">3c7943a8db38a7006d7070e21f9619d0</sys_package>
         <sys_policy/>
@@ -118,26 +136,28 @@ margin:0px;
         <sys_scope display_value="Unified Service Portal">3c7943a8db38a7006d7070e21f9619d0</sys_scope>
         <sys_update_name>sp_widget_3c306b49db012f406d7070e21f961910</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2018-10-25 08:59:21</sys_updated_on>
-        <template><![CDATA[<div >
-  <h3> Welcome to the Ricoh Services Portal</h3>
-  <h4> This portal is a generic copy that will need to be written or discarded</h4>
+        <sys_updated_on>2018-10-30 06:21:18</sys_updated_on>
+        <template><![CDATA[<div  >
+  <h3> Welcome to the Ricoh Services Portal </h3>
+   
 </div>
 
 <div class="row">
-  <a href="www.abcxyz.com">
-  <div  ng-if="c.data.isReturnMail" class="col-xs-12 col-md-5  col-lg-6" ng-include="'tmpReturnMail'">
+   
+  <div ng-click="func(c.data.isReturnMail)" 
+       ng-if="c.data.isReturnMail" class="col-xs-12 col-md-5  col-lg-6" ng-include="'tmpReturnMail'">
   
   </div>
-    </a>
+   
   <div ng-if="c.data.isIntelligentDelivery" class="col-xs-12 col-md-5 col-lg-6" ng-include="'tmpIntelligentDelivery'">  
   </div>  
-<a href="www.helloworld.com">
-  <div ng-if="c.data.isPrintPlatformVisible" class="col-xs-12 col-md-5 col-lg-6" ng-include="'tmpPrintPlatform'">
+
+  <div ng-click="func(c.data.isPrintPlatform)" 
+       ng-if="c.data.isPrintPlatform" class="col-xs-12 col-md-5 col-lg-6" ng-include="'tmpPrintPlatform'">
   
   </div>
-  </a>
-  <div ng-if="c.data.isBusinessAnalyticsVisible" class="col-xs-12 col-md-5 col-lg-6" ng-include="'tmpBusinessAnalytics'">  
+  
+  <div ng-if="c.data.isBusinessAnalytics" class="col-xs-12 col-md-5 col-lg-6" ng-include="'tmpBusinessAnalytics'">  
   </div>  
 </div>  
 ]]></template>

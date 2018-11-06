@@ -4,16 +4,16 @@
         <active>true</active>
         <category>Service Portal</category>
         <format>png</format>
-        <height>45</height>
+        <height>65</height>
         <image/>
         <name>mail-icon.png</name>
-        <size_bytes>781</size_bytes>
+        <size_bytes>3361</size_bytes>
         <sys_class_name>db_image</sys_class_name>
         <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
         <sys_created_on>2018-10-08 12:01:25</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ed7b2411dbcd2f406d7070e21f9619ae</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>mail-icon.png</sys_name>
         <sys_package display_value="Unified Service Portal" source="x_mst_usp">3c7943a8db38a7006d7070e21f9619d0</sys_package>
         <sys_policy/>
@@ -21,9 +21,9 @@
         <sys_scope display_value="Unified Service Portal">3c7943a8db38a7006d7070e21f9619d0</sys_scope>
         <sys_update_name>db_image_ed7b2411dbcd2f406d7070e21f9619ae</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2018-10-08 12:01:30</sys_updated_on>
+        <sys_updated_on>2018-11-01 12:05:57</sys_updated_on>
         <thumbnail/>
-        <width>56</width>
+        <width>65</width>
     </db_image>
     <sys_attachment action="INSERT_OR_UPDATE">
         <average_image_color>#0</average_image_color>
@@ -31,42 +31,37 @@
         <compressed>true</compressed>
         <content_type>image/png</content_type>
         <file_name>image</file_name>
-        <image_height>45</image_height>
-        <image_width>56</image_width>
-        <size_bytes>781</size_bytes>
-        <size_compressed>804</size_compressed>
+        <image_height>65</image_height>
+        <image_width>65</image_width>
+        <size_bytes>3361</size_bytes>
+        <size_compressed>3384</size_compressed>
         <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
-        <sys_created_on>2018-10-08 12:01:30</sys_created_on>
+        <sys_created_on>2018-11-01 12:05:57</sys_created_on>
         <sys_domain>8eba0beedb423200ddad70e21f9619df</sys_domain>
         <sys_domain_path>!!!/!!!/!!!/!!!/!!!/</sys_domain_path>
-        <sys_id>298be8dddb8d2f406d7070e21f961907</sys_id>
+        <sys_id>78b29009dbadab406d7070e21f9619c6</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2018-10-08 12:01:31</sys_updated_on>
+        <sys_updated_on>2018-11-01 12:05:57</sys_updated_on>
         <table_name>ZZ_YYdb_image</table_name>
         <table_sys_id>ed7b2411dbcd2f406d7070e21f9619ae</table_sys_id>
     </sys_attachment>
     <sys_attachment_doc action="INSERT_OR_UPDATE">
-        <data>H4sIAAAAAAAAAAENA/L8iVBORw0KGgoAAAANSUhEUgAAADgAAAAtCAYAAAD7nag2AAAABGdBTUEA
-ALGPC/xhBQAAAsRJREFUaAXtmjFP20AYhmOgbF2QQGKgEiMLa5UFJCSWbv0DbF2QurFRBsRSCbZK
-7HTqxsbCwFT1H3ToGKl0aqnKxpI+b/RdCJHj3CWHz7F80oud+O773scX4AU563a7L1qt1gnaQ6uo
-DuMXEJ/R0QJfBLeL3qIOqsN4BcR5D4Qd/Ile14FqkEFMYmvxReMY3aGtwUmzeg7HNvqLug5wlfM9
-dI/0UZ3ZIf/G8Z7jI6CIeP0G/UPvZpFQvs2/OLRpTwENss37v9HhLEHKr/luG0c+oF3cYHIHfUJz
-VQaVP/MpvxvOK+ejAQ1yjUnf0Re06BZW6Shf5k8+1wa98boY0CCXmPgNXaOXgwVSn8uP+ZK/pWE/
-vNcDLPz4ZVn2h4U76AHdsGh5uFCK1/hYkR8kXzvmM98KkzUKIxrX59EF+oHW8yuV8676mw/5mR/V
-lWvjP6LDi1l0hm7R5vC1Ml6rr/U/G9ePeeGAKsrCA1R66qHnlvU9GAdnPicDtMWlph7AXDrRXzxe
-gzWTA6oDBUpJPfTppxMvMps0NaBBtimk1PMhpLnvXNW1+r104rvOvE23g64ZBqKnHmrmphPX0+dI
-jTiAdreipR6MjUwnPmBuTlRAg5w69WCqMJ048z5HB1iYZHwKuTk5qUdpw3tgyD+deFdlIoU1CpNM
-YL3g1EN/r3QS6CPe92BeY0yforGphzkunZzm1Zn0Peo+L6CM0aQw9XA9KJ2EwJYCaJC5qQcDwemk
-koAG+ST1ADdROqksoEG2AVPqubJjcDqpNKBBKvV8Rf3/nYSYDplLj+f/IRNiKPZcBxjtF31sg7Hq
-NYCx7mSqOs0Oprrzsfo2OxjrTqaq0+xgqjsfq2+zg7HuZKo6zQ6muvOx+moH9VSQHpyp2xDTbcaf
-FR850ZNO+6iD6jAEpyedrvUo1xHK0CWK9u9DaqUc/WfV/gMjNoqMCrvewgAAAABJRU5ErkJgghv4
-/OINAwAA</data>
-        <length>1076</length>
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
         <position>0</position>
-        <sys_attachment display_value="image" sys_id="298be8dddb8d2f406d7070e21f961907">298be8dddb8d2f406d7070e21f961907</sys_attachment>
+        <sys_attachment display_value="image" sys_id="78b29009dbadab406d7070e21f9619c6">78b29009dbadab406d7070e21f9619c6</sys_attachment>
         <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
-        <sys_created_on>2018-10-08 12:01:30</sys_created_on>
-        <sys_id>698be8dddb8d2f406d7070e21f961907</sys_id>
+        <sys_created_on>2018-11-01 12:05:57</sys_created_on>
+        <sys_id>b8b29009dbadab406d7070e21f9619c6</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>4500</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="78b29009dbadab406d7070e21f9619c6">78b29009dbadab406d7070e21f9619c6</sys_attachment>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2018-11-01 12:05:57</sys_created_on>
+        <sys_id>3cb29009dbadab406d7070e21f9619c6</sys_id>
     </sys_attachment_doc>
 </record_update>

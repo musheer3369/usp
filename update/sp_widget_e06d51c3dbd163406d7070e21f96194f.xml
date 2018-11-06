@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function loginCtrl($scope, $http, $window, $location, urlTools, glideUserSession, glideSystemProperties, spUtil) {
+	
+	var c = this;
+	
+	if (typeof c.options.show_panel == 'undefined') {
+		c.options.show_panel = true;
+	}
+	
+	//
+	if (!c.data.is_logged_in && c.data.multisso_enabled &&c.data.default_idp) {
+		c.server.get({
+			action: "set_sso_destination",
+			pageURI: c.data.pageURI
+		}).then(function() {
+			$window.location = "/login_with_sso.do?glide_sso_id=" + c.data.default_idp;
+		});
+	}
+	
+	c.login = function(username, password) {
+		var url = urlTools.getURL('view_form.login');
+		// If the page isn't public then the id in the
+		// url won't match the rendered page id.
+		var pageId = $location.search().id || $scope.page.id;
+		var isLoginPage = $scope.portal.login_page_dv == pageId;
+		return $http({
+			method: 'post',
+			url: url,
+			data: urlTools.encodeURIParameters({
+				'sysparm_type': 'login',
+				'ni.nolog.user_password': true,
+				'remember_me': !!c.remember_me ? true : false,
+				'user_name': username,
+				'user_password': password,
+				'get_redirect_url': true,
+				'sysparm_goto_url': isLoginPage ? null : $location.url()
+			}),
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded'
+			}
+		}).then(function(response) {
+			if (!response.data) {
+				c.message = $scope.data.errorMsg;
+				return;
+			}
+			
+			if (response.data.status == 'success') {
+				c.success = response.data.message;
+				$window.location = response.data.redirect_url;
+			} else {
+				// wrong username or password
+				c.message = response.data.message;
+				c.password = "";
+			}
+			
+		}, function errorCallback(response) {
+			// error
+			c.message = $scope.data.errorMsg;
+		});
+	};
+	
+	c.externalLogin = function() {
+		c.server.get({
+			action: "set_sso_destination",
+			pageURI: c.data.pageURI
+		}).then(function() {
+			glideSystemProperties.set("glide.authenticate.multisso.enabled", true);
+			
+			glideUserSession.getSsoRedirectUrlForUsername(c.username)
+			.then(function(url) {
+				$window.location = url;
+			}, function(err) {
+				spUtil.addErrorMessage($scope.data.errorMsg2);
+			});
+		});
+	};
+	
+	c.setExternalLogin = function(newVal) {
+		c.externalLoginMode = newVal;
+	};
+	
+	c.setFirstTime = function(newVal) {
+		c.firstTimeMode = newVal;
+	};
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.set-login-type-link {&#13;
+  margin-top: 10px;&#13;
+  display: block;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>usp-login</id>
+        <internal>false</internal>
+        <link/>
+        <name>USP Login</name>
+        <option_schema>[{"name":"show_panel","label":"Show Panel","type":"boolean"}]</option_schema>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[// populate the 'data' object// e.g., data.table = $sp.getValue('table');
+//We don't want to set a starting page until we've begun the login process.
+data.errorMsg = gs.getMessage("There was an error processing your request");
+data.errorMsg2 = gs.getMessage("An error has occurred - please contact your system administrator");
+data.passwordMsg = gs.getMessage("Password");
+data.usernameMsg = gs.getMessage("User name");
+
+var util = new GlideSPUtil();
+if(input.action == "set_sso_destination") {
+	var gs_nav_to = gs.getSession().getProperty("nav_to");
+	gs.getSession().putProperty("nav_to", null);
+	
+	if (!gs.getSession().getProperty("starting_page"))
+		gs.getSession().putProperty("starting_page", gs_nav_to);
+}
+
+if(input.action == "reset_usr_pass") {
+	var reset = new global.ResetPwdAjaxProcessor();
+	data.testing = reset.resetPwdAjaxProcess(input.user, input.email);
+}
+
+data.is_logged_in = gs.getSession().isLoggedIn();
+data.multisso_enabled = GlideProperties.getBoolean("glide.authenticate.multisso.enabled");
+data.default_idp = GlideProperties.get("glide.authenticate.sso.redirect.idp");
+data.pageURI = util.getPageUri();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2018-10-26 12:24:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e06d51c3dbd163406d7070e21f96194f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>USP Login</sys_name>
+        <sys_package display_value="Unified Service Portal" source="x_mst_usp">3c7943a8db38a7006d7070e21f9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Unified Service Portal">3c7943a8db38a7006d7070e21f9619d0</sys_scope>
+        <sys_update_name>sp_widget_e06d51c3dbd163406d7070e21f96194f</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2018-10-26 12:32:15</sys_updated_on>
+        <template><![CDATA[<div ng-if="!data.is_logged_in">
+  <form ng-if="!c.externalLoginMode && !c.firstTimeMode" class="form-signin" ng-submit="c.login(c.username, c.password)" method="post">
+    <div ng-class="{'panel panel-default': c.options.show_panel}">
+      <div ng-if="c.options.show_panel" class="panel-heading">
+        <small class="panel-title">Enter your Credentails</small>
+      </div>
+
+      <div ng-class="{'panel-body': c.options.show_panel}">
+
+        <div class="list-group list-group-sm">
+          <div class="list-group-item">
+            <label for="username" class="sr-only">{{::data.usernameMsg}}</label>
+            <input id="username" name="username" ng-keypress="c.message = ''" ng-click="c.message = ''" class="form-control no-border" type="text" placeholder='{{::data.usernameMsg}}' autofocus="true" ng-model="c.username"/>
+          </div>
+          <div class="list-group-item">	
+            <label for="password" class="sr-only">{{::data.passwordMsg}}</label>
+            <input id="password" name="password" ng-keypress="c.message = ''" ng-click="c.message = ''" class="form-control no-border" type="password" placeholder='{{::data.passwordMsg}}' ng-model="c.password"/>
+          </div>
+        </div>
+
+        <div ng-if="c.message" class="alert alert-danger" role="alert">{{c.message}}</div>
+        <div ng-if="c.success" class="alert alert-success" role="alert">{{c.success}}</div>
+
+        <div class="checkbox">
+          <label>
+            <input name="c.remember_me" ng-model="c.remember_me" checked="checked" id="remember_me" type="checkbox" class="checkbox" value="true"/> ${Remember me}
+          </label>
+        </div>
+
+        <button name="login" type="submit" class="btn btn-lg btn-primary btn-block">
+          ${Login}
+        </button>
+        
+        <a ng-if="data.multisso_enabled"
+           class="set-login-type-link"
+           href="javascript:void(0)"
+           ng-click="c.setFirstTime(true)">${Reset Password}</a>
+        
+    
+      </div>
+    </div>
+  </form>
+  <form ng-if="c.externalLoginMode && !c.firstTimeMode" class="form-signin" ng-submit="c.externalLogin()" method="post">
+    <div ng-class="{'panel panel-default': c.options.show_panel}">
+      <div ng-if="c.options.show_panel" class="panel-heading">
+        <h3 class="panel-title">${External Login}</h3>
+      </div>
+
+      <div ng-class="{'panel-body': c.options.show_panel}">
+        <div class="list-group list-group-sm">
+          <div class="list-group-item">
+            <label for="username" class="sr-only">${User ID}</label>
+            <input id="username" name="username" ng-click="message = ''" class="form-control no-border" type="text" placeholder='${User ID}' autofocus="true" ng-model="c.username"/>
+          </div>
+        </div>
+
+        <button name="login" type="submit" class="btn btn-lg btn-primary btn-block">
+          ${Submit}
+        </button>
+        
+        <a href="javascript:void(0)"
+           class="set-login-type-link"
+           ng-click="c.setExternalLogin(false)">${Use internal login}</a>
+      </div>
+    </div>
+  </form>
+  <div ng-if="c.firstTimeMode && !c.externalLoginMode" class="form-signin">
+   		<iframe src="/reset_password.do" frameborder="0" height="280" width="320"></iframe>
+
+        <a href="javascript:void(0)"
+           class="set-login-type-link"
+           ng-click="c.setFirstTime(false)">${Back to Login}</a>
+      </div>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

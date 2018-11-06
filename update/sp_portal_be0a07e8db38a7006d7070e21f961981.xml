@@ -2,15 +2,15 @@
 <record_update table="sp_portal">
     <sp_portal action="INSERT_OR_UPDATE">
         <css_variables>$body-bg:#4A4A4A !default;&#13;
-h1,h2,h3,h4,h5, .h1 ,.h2 ,.h3,.h4 ,.h5{&#13;
-color:white  !important;&#13;
-}</css_variables>
+&#13;
+&#13;
+</css_variables>
         <default>false</default>
         <homepage display_value="usp_home">68a2df64db78a7006d7070e21f9619e7</homepage>
         <icon/>
         <kb_knowledge_base/>
         <kb_knowledge_page/>
-        <login_page/>
+        <login_page display_value="usp_login">790ddd43dbd163406d7070e21f96197d</login_page>
         <logo/>
         <notfound_page/>
         <quick_start_config/>
@@ -25,7 +25,7 @@ color:white  !important;&#13;
         <sys_created_on>2018-09-24 05:23:21</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>be0a07e8db38a7006d7070e21f961981</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>Unified Service Portal</sys_name>
         <sys_package display_value="Unified Service Portal" source="x_mst_usp">3c7943a8db38a7006d7070e21f9619d0</sys_package>
         <sys_policy/>
@@ -33,7 +33,7 @@ color:white  !important;&#13;
         <sys_scope display_value="Unified Service Portal">3c7943a8db38a7006d7070e21f9619d0</sys_scope>
         <sys_update_name>sp_portal_be0a07e8db38a7006d7070e21f961981</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2018-10-15 09:35:38</sys_updated_on>
+        <sys_updated_on>2018-10-30 06:17:03</sys_updated_on>
         <theme display_value="USP Theme">7c469f2cdbb8a7006d7070e21f9619c5</theme>
         <title>Unified Service Portal</title>
         <url_suffix>usp</url_suffix>
