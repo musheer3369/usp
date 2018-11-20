@@ -40,7 +40,7 @@
         <sys_created_on>2018-09-24 06:15:14</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>78065768dbb8a7006d7070e21f961994</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>USP Footer</sys_name>
         <sys_package display_value="Unified Service Portal" source="x_mst_usp">3c7943a8db38a7006d7070e21f9619d0</sys_package>
         <sys_policy/>
@@ -48,10 +48,14 @@
         <sys_scope display_value="Unified Service Portal">3c7943a8db38a7006d7070e21f9619d0</sys_scope>
         <sys_update_name>sp_header_footer_78065768dbb8a7006d7070e21f961994</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2018-11-06 07:46:26</sys_updated_on>
-        <template><![CDATA[<div class="container-fluid">
-  To know more about Ricoh's Services, visit our homepage at: 
-  <a href="www.ricoh-usa.com">www.ricoh-usa.com</a>
+        <sys_updated_on>2018-11-06 07:58:55</sys_updated_on>
+        <template><![CDATA[<div class="container-fluid ">
+  <div class="row footer-area">
+    <div class=" col-md-12 footer-left">
+      To know more about Ricoh's Services, visit our homepage at: <a href="http://www.ricoh-usa.com" target="_blank">www.ricoh-usa.com</a>
+    </div>
+  </div>
+  
 </div>
 <div class="container-fluid border">
   <div class="row footer-area"> 
